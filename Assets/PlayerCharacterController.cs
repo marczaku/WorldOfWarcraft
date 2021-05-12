@@ -22,8 +22,8 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     // Option 3: read values anywhere else
-    void Update() {
-        var movement = this.inputActions.Character.Move.ReadValue<Vector2>() * walkingSpeed;
+    void FixedUpdate() {
+        var movement = this.inputActions.Character.Move.ReadValue<Vector2>() * walkingSpeed * Time.fixedDeltaTime;
         GetComponent<Rigidbody>().AddForce(movement.x, 0f, movement.y, ForceMode.VelocityChange);
         //Debug.Log(movement);
     }

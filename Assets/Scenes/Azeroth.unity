@@ -1209,7 +1209,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967023953}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 950d35491dbf8417b95c8c778dea058d, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 02bc0e2176f6a4e4ea3faf0c622664cf, type: 2}
   m_EnableTreeColliders: 1
@@ -2173,6 +2173,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hellscream
       objectReference: {fileID: 0}
+    - target: {fileID: 3596748221432811833, guid: 13317e5ce6d4c44769af6a3661390c5e, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 950d35491dbf8417b95c8c778dea058d, type: 2}
+    - target: {fileID: 3596748221432811834, guid: 13317e5ce6d4c44769af6a3661390c5e, type: 3}
+      propertyPath: m_Drag
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3596748221432811834, guid: 13317e5ce6d4c44769af6a3661390c5e, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 4363233957895382498, guid: 13317e5ce6d4c44769af6a3661390c5e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2219,7 +2231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5589549164902879612, guid: 13317e5ce6d4c44769af6a3661390c5e, type: 3}
       propertyPath: walkingSpeed
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13317e5ce6d4c44769af6a3661390c5e, type: 3}
