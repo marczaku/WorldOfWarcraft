@@ -23,8 +23,13 @@ public class PlayerCharacterController : MonoBehaviour {
 
     // Option 3: read values anywhere else
     void FixedUpdate() {
-        var movement = this.inputActions.Character.Move.ReadValue<Vector2>() * walkingSpeed * Time.fixedDeltaTime;
-        GetComponent<Rigidbody>().AddForce(movement.x, 0f, movement.y, ForceMode.VelocityChange);
+        var movementInput = this.inputActions.Character.Move.ReadValue<Vector2>();
+        var movement = movementInput * walkingSpeed * Time.fixedDeltaTime;
+        var rigidBody = GetComponent<Rigidbody>();
+        rigidBody.AddForce(movement.x, 0f, movement.y, ForceMode.VelocityChange);
+        var animator = GetComponent<Animator>();
+        animator.SetFloat("X", rigidBody.velocity.x);
+        animator.SetFloat("Y", rigidBody.velocity.z);
         //Debug.Log(movement);
     }
 }
